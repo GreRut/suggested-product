@@ -30,3 +30,4 @@ C:\SALT\course\20241212\suggested-product\Product.Api\obj\Debug\net8.0\refint\Pr
 C:\SALT\course\20241212\suggested-product\Product.Api\obj\Debug\net8.0\Product.Api.pdb
 C:\SALT\course\20241212\suggested-product\Product.Api\obj\Debug\net8.0\Product.Api.genruntimeconfig.cache
 C:\SALT\course\20241212\suggested-product\Product.Api\obj\Debug\net8.0\ref\Product.Api.dll
+C:\SALT\course\20241212\suggested-product\Product.Api\obj\Debug\net8.0\Product.Api.sourcelink.json

@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 namespace Product.Api.Controllers
 {
     [ApiController, Route("api/1/[controller])")]
-    class HelloController : ControllerBase
+    public class HelloController : ControllerBase
     {
         [HttpGet]
         public string SayHello() => "Hello";
