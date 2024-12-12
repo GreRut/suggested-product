@@ -1,0 +1,7 @@
+{
+"name": "Product 3",
+"description": "This is a description for product 3",
+"price": "49.99",
+"id": "a1e8f9c7-dc14-4f12-bd11-bfe73fcaf8b0",
+"imgSrc": "https://example.com/images/product3.jpg"
+}
