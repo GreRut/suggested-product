@@ -1,28 +1,20 @@
 ---
-import { getCollection, getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 import GalleryCard from './product-gallery/gallery-card.astro';
 
+const productsCollection = await getCollection('products');
+const products = productsCollection.map(item => item.data);
+
 interface Props {
-    title: string
+    title: string;
 }
 
-const {title} = Astro.props;
-
-const productData = await getCollection('products');
-const products = productData.map(item => item.data);
-
+const { title } = Astro.props;
 ---
 
-<section class="m-10 bg-slate-900 rounded-xl p-8">
-    <h2 class="text-4xl">
-        {title}
-    </h2>
-    <div class="flex">
-        {products.map(product => <GalleryCard product={product}/>)}
+<section class="m-10 bg-slate-900 rounded-xl text-white p-8">
+    <h2 class="text-4xl">{title}</h2>
+    <div class="flex flex-row flex-wrap gap-4">
+        {products.map(product => <GalleryCard product={product} /> )}
     </div>
-</main>
-</section>
-<style>
-
-</style>
-
+</section> 
