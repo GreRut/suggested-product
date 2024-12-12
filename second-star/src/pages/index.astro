@@ -14,5 +14,6 @@ import Layout from '../layouts/Layout.astro';
 	const title = document.querySelector<HTMLHeadingElement>(".hello-world")!;
 	fetch("http://localhost:5187/api/v1/Hello")
 	  .then((result) => result.text())
-	  .then((text) => (title.textContent = text));
+	  .then(text => console.log(`%c ${text}`, "color:green;", "Look like the backend is avo"))
+	  .catch(() => console.error("Baceknd is down or unavailable"))
   </script>
