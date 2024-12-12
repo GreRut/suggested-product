@@ -7,5 +7,12 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
+	<h2 class="hello-world">Loading</h2>
 	<Welcome />
-</Layout>
+  </Layout>
+  <script>
+	const title = document.querySelector<HTMLHeadingElement>(".hello-world")!;
+	fetch("http://localhost:5187/api/v1/Hello")
+	  .then((result) => result.text())
+	  .then((text) => (title.textContent = text));
+  </script>

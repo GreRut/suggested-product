@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Product.Api.Controllers
 {
-    [ApiController, Route("api/1/[controller])")]
+    [ApiController, Route("api/v1/[controller]")]
     public class HelloController : ControllerBase
     {
         [HttpGet]
