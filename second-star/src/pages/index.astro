@@ -1,10 +1,10 @@
 ---
 import { isRenderTemplateResult } from 'astro/runtime/server/render/astro/render-template.js';
 import Layout from '../layouts/Layout.astro';
-import { getCollection, getEntry } from 'astro:content';
 
-const productData = await getCollection('products');
-const products = productData.map(item => item.data);
+import ProductGallery from '../components/product-gallery.astro';
+
+
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -13,12 +13,8 @@ const products = productData.map(item => item.data);
 <Layout>
 	<main>
 		<h2>Hello World</h2>
-		{
-			products.map(product=> 
-				<p>{product.name}</p>
-			)
-		}
-	</main>
+		<ProductGallery title="ProductGallery"></ProductGallery>
+
   </Layout>
   <script>
 	const title = document.querySelector<HTMLHeadingElement>(".hello-world")!;

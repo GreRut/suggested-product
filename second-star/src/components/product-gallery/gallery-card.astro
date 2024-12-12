@@ -1,0 +1,21 @@
+---
+
+
+// import Layout from '../layouts/Layout.astro';
+
+interface Props {
+    product: {
+        name: string;
+        description: string;
+        price: string;
+        id: string;
+        imgSrc: string;
+    }
+}
+ 
+const {product} = Astro.props;
+---
+
+<article class ="m-2 p-2">
+    <h3>{product.name}</h3>
+</article>
